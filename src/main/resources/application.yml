@@ -1,0 +1,89 @@
+server:
+  port: 8082
+spring:
+  profiles:
+    active: qa
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+      driverClassName: com.mysql.cj.jdbc.Driver
+      password: hacker90
+      url: jdbc:mysql://localhost:3306/dcpapp
+      username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+welcome:
+  message: Welcome to Mean Machine chamber
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env,beans"
+---
+spring:
+  config:
+    activate:
+      on-profile: qa
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    password: hacker90
+    url: jdbc:mysql://localhost:3306/dcp-qa
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+welcome:
+  message: Welcome to Mean Machine chamber
+#---
+#spring:
+#  profile: qa
+#  name: qa
+#  datasource:
+#    driverClassName: com.mysql.cj.jdbc.Driver
+#    password: hacker90
+#    url: jdbc:mysql://localhost:3306/dcp-qa
+#    username: root
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+
+#---
+#spring:
+#  name: dev
+#  datasource:
+#    driverClassName: com.mysql.cj.jdbc.Driver
+#    password: hacker90
+#    url: jdbc:mysql://localhost:3306/dcp-dev
+#    username: root
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#welcome:
+#  message: Welcome to Mean Machine chamber
+#---
+#spring:
+#  name: prod
+#  datasource:
+#    driverClassName: com.mysql.cj.jdbc.Driver
+#    password: hacker90
+#    url: jdbc:mysql://localhost:3306/dcp-prod
+#    username: root
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#welcome:
+#  message: Welcome to Mean Machine chamber
+#
+#
+#
