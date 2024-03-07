@@ -2,7 +2,7 @@ server:
   port: 8081
 spring:
   profiles:
-    active: qa
+    active: dev
 ---
 spring:
   config:
@@ -34,7 +34,7 @@ spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
     password: password
-    url: jdbc:mysql://docker.for.mac.host.internal:3306/qdfvv
+    url: jdbc:mysql://localhost:3306/dcpapp
     username: mean
   jpa:
     hibernate:
