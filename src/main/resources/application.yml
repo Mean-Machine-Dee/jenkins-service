@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8081
 spring:
   profiles:
     active: qa
@@ -18,7 +18,7 @@ spring:
       ddl-auto: update
     show-sql: true
 welcome:
-  message: Welcome to Mean Machine chamber
+  message: Welcome to Mean Machine chamber and watch some
 
 management:
   endpoints:
@@ -33,9 +33,9 @@ spring:
       on-profile: qa
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    password: hacker90
-    url: jdbc:mysql://localhost:3306/dcp-qa
-    username: root
+    password: password
+    url: jdbc:mysql://docker.for.mac.host.internal:3306/qdfvv
+    username: mean
   jpa:
     hibernate:
       ddl-auto: update
